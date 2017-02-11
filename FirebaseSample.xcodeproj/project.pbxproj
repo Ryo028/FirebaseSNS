@@ -11,6 +11,7 @@
 		246B219E60783C71B9019BB2 /* Pods_FirebaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA0EEFE953DB48843069E37 /* Pods_FirebaseSample.framework */; };
 		544DEE211E46F54C003B6660 /* cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 544DEE201E46F54C003B6660 /* cat.jpeg */; };
 		544DEE231E46FEDC003B6660 /* jobs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544DEE221E46FEDC003B6660 /* jobs.jpg */; };
+		5461CA511E4F811100B8C1C2 /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461CA501E4F811100B8C1C2 /* PreViewController.swift */; };
 		548F6BCF1E2AFDA60049C66D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548F6BCE1E2AFDA60049C66D /* AppDelegate.swift */; };
 		548F6BD11E2AFDA60049C66D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548F6BD01E2AFDA60049C66D /* FirstViewController.swift */; };
 		548F6BD31E2AFDA60049C66D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548F6BD21E2AFDA60049C66D /* SecondViewController.swift */; };
@@ -29,7 +30,6 @@
 		54B122B61E3C8370004F31D9 /* TargetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B122B51E3C8370004F31D9 /* TargetTableViewCell.swift */; };
 		54BE4A931E3443EE005A18B8 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BE4A921E3443EE005A18B8 /* CardCollectionViewCell.swift */; };
 		54BE4A951E34D260005A18B8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BE4A941E34D260005A18B8 /* Login.swift */; };
-		54D274BD1E4ECC1F003F4F4F /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D274BC1E4ECC1F003F4F4F /* PreViewController.swift */; };
 		54D274C01E4ED72A003F4F4F /* steve-jobs-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D274BF1E4ED72A003F4F4F /* steve-jobs-8.jpg */; };
 		54D445911E3D09B500227D66 /* ViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D445901E3D09B500227D66 /* ViewLogic.swift */; };
 		54E8521D1E3E3EAA00AB02E8 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E8521C1E3E3EAA00AB02E8 /* PostViewController.swift */; };
@@ -59,6 +59,7 @@
 		51FF73DFDEB2EEAE2CDFD62F /* Pods-FirebaseSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleTests/Pods-FirebaseSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		544DEE201E46F54C003B6660 /* cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpeg; sourceTree = "<group>"; };
 		544DEE221E46FEDC003B6660 /* jobs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jobs.jpg; sourceTree = "<group>"; };
+		5461CA501E4F811100B8C1C2 /* PreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
 		548F6BCB1E2AFDA60049C66D /* FirebaseSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		548F6BCE1E2AFDA60049C66D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		548F6BD01E2AFDA60049C66D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		54B122B51E3C8370004F31D9 /* TargetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetTableViewCell.swift; sourceTree = "<group>"; };
 		54BE4A921E3443EE005A18B8 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		54BE4A941E34D260005A18B8 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		54D274BC1E4ECC1F003F4F4F /* PreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
 		54D274BF1E4ED72A003F4F4F /* steve-jobs-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steve-jobs-8.jpg"; sourceTree = "<group>"; };
 		54D445901E3D09B500227D66 /* ViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLogic.swift; sourceTree = "<group>"; };
 		54E8521C1E3E3EAA00AB02E8 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 				54E8521C1E3E3EAA00AB02E8 /* PostViewController.swift */,
 				549D99701E3CDA9600B63142 /* TargetContentView.swift */,
 				54B122B51E3C8370004F31D9 /* TargetTableViewCell.swift */,
-				54D274BC1E4ECC1F003F4F4F /* PreViewController.swift */,
+				5461CA501E4F811100B8C1C2 /* PreViewController.swift */,
 				54B122B31E3C7BB5004F31D9 /* ProfileViewController.swift */,
 			);
 			name = Profile;
@@ -531,7 +531,7 @@
 				548F6C031E2B29FD0049C66D /* LoginViewController.swift in Sources */,
 				54BE4A931E3443EE005A18B8 /* CardCollectionViewCell.swift in Sources */,
 				548F6BD11E2AFDA60049C66D /* FirstViewController.swift in Sources */,
-				54D274BD1E4ECC1F003F4F4F /* PreViewController.swift in Sources */,
+				5461CA511E4F811100B8C1C2 /* PreViewController.swift in Sources */,
 				549D99711E3CDA9600B63142 /* TargetContentView.swift in Sources */,
 				54B122B41E3C7BB5004F31D9 /* ProfileViewController.swift in Sources */,
 				54BE4A951E34D260005A18B8 /* Login.swift in Sources */,
