@@ -515,7 +515,7 @@
         <scene sceneID="kxK-No-nSJ">
             <objects>
                 <navigationController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7d2-tG-5YK" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UZ4-CU-W6s">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UZ4-CU-W6s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
