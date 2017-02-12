@@ -58,15 +58,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
      */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        //        let cell : UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TestCell",
-        //                                                                             for: indexPath as IndexPath)
-        
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TestCell", for: indexPath) as UICollectionViewCell
-        
-        //cell.myCard.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-//        cell.cardView.contentView = cell.myImage
-//        cell.cardView.toolbar = cell.toolbar
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         let item = contentArray[indexPath.row]
         let content = item.value as! Dictionary<String, AnyObject>
@@ -84,18 +75,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
 //                cell.cardView.contentView = cell.cardImage
 //                cell.cardView.image = UIImage.init(data: data!)
                 cell.normalImage.image = UIImage.init(data: data!)
-                // UIImageをCIImageにキャスト
-                let filterImage = CIImage(image: cell.normalImage.image!)
-                // フィルターを選ぶ
-                let filter = CIFilter(name: "CIVignette")
-                //イメージをセット
-                filter?.setValue(filterImage, forKey: "inputImage")
-                filter!.setValue(NSNumber(value: 5.0), forKey: "inputIntensity")
-
-                self.ciContext = CIContext(options: nil)
-                let imageRef = self.ciContext.createCGImage((filter?.outputImage)!, from: (filter?.outputImage!.extent)!)
-                let outputImage = UIImage(cgImage: imageRef!)
-                cell.normalImage.image = outputImage
+                //cell.normalImage.image = outputImage
 
                 cell.normalImage.layer.cornerRadius = 5
                 cell.normalImage.layer.masksToBounds = true
@@ -156,6 +136,20 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     fileprivate func setMaterial() {
         let card = CardCollectionViewCell()
         card.cardView.bottomBar = card.bottomBar
+    }
+    
+    fileprivate func setFilter(cell: UICollectionViewCell) {
+//        // UIImageをCIImageにキャスト
+//        let filterImage = CIImage(image: cell.normalImage.image!)
+//        // フィルターを選ぶ
+//        let filter = CIFilter(name: "CIVignette")
+//        //イメージをセット
+//        filter?.setValue(filterImage, forKey: "inputImage")
+//        filter!.setValue(NSNumber(value: 5.0), forKey: "inputIntensity")
+//        
+//        self.ciContext = CIContext(options: nil)
+//        let imageRef = self.ciContext.createCGImage((filter?.outputImage)!, from: (filter?.outputImage!.extent)!)
+//        let outputImage = UIImage(cgImage: imageRef!)
     }
     
 }
