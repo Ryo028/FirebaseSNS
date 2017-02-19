@@ -12,9 +12,9 @@ import ImageRow
 
 class PostViewController: FormViewController {
 
-    var targetName:String! = ""
-    var targetContent: String! = ""
-    var targetHour: String! = ""
+    var name:String!
+    var quotaion: String!
+    var comment: String!
     
     private var myRightButton: UIBarButtonItem!
     
@@ -50,13 +50,13 @@ class PostViewController: FormViewController {
                 $0.title = "Name"
                 $0.placeholder = "Ryo Miyata"
             }.onChange{ row in
-                self.targetName = row.value
+                self.name = row.value
             }
             <<< TextAreaRow("Quo") {
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 100)
                 $0.placeholder = "名言を入れてください"
             }.onChange{ row in
-                self.targetContent = row.value
+                self.quotaion = row.value
             }
         
         form +++ Section("コメント")
@@ -64,23 +64,14 @@ class PostViewController: FormViewController {
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 100)
                 $0.placeholder = "入力してください"
             }.onChange{ row in
-                self.targetContent = row.value
+                self.comment = row.value
             }
         form +++ Section()
             <<< ButtonRow() {
                 $0.title = "プレビュー"
                 }.onCellSelection({ (cell, row) in
                     self.performSegue(withIdentifier: "ToPreview", sender: self)
-                })
-        
-        
-//        let title: ActionSheetRow? = form.rows(tag: "TitleRow")
-//        let titleValue = title?.value
-        
-        // テキストエリアの値を取得
-//        let textRow: TextAreaRow? = form.rowBy(tag: "TextAreaRow")
-//        let textValue = textRow?.value
-        
+                })        
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,18 +79,28 @@ class PostViewController: FormViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let formValue = form.values()
+        if segue.identifier == "ToPreview" {
+            let previewController = segue.destination as! PreViewController
+            //let previewImg = (formValue["Pic"] as! UIImage)
+            previewController.formDataDic = formValue
+        }
+    }
+    
     // 投稿処理
     internal func onClick(sender: UIButton) {
         let fireAccess = FireAccess()
-        
-        let values = form.values()
-        
-        let name = values["Name"] as! String?
-        let quo = values["Quo"] as! String?
-        let comment = values["Comment"] as! String?
-        let photo = values["Pic"] as! UIImage
+        // ekurakaのformの値を取得
+        let formValueDic = form.values()
+        print(String(describing: type(of: formValueDic)))
 
-        fireAccess.create(name: name, quotation: quo, comment: comment, photo: photo)
+//        let name = values["Name"] as! String
+//        let quo = values["Quo"] as! String
+//        let comment = values["Comment"] as! String
+//        let photo = values["Pic"] as! UIImage
+        
+        fireAccess.sentFormData(formValueDic: formValueDic)
         //initImageView()
     }
 }

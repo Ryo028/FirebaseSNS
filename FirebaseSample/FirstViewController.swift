@@ -63,7 +63,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         let content = item.value as! Dictionary<String, AnyObject>
         
         // optinal型をunwrap
-        cell.cardLable.text = (content["Quotation"] as! String)
+        //cell.cardLable.text = (content["Quotation"] as! String)
         //cell.cardView.bottomBar = cell.bottomBar
         
         let personImgNo = (content["PersonImg"] as! String)

@@ -150,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				548F6BCD1E2AFDA60049C66D /* FirebaseSample */,
-				548F6BE41E2AFDA60049C66D /* FirebaseSampleTests */,
 				548F6BEF1E2AFDA60049C66D /* FirebaseSampleUITests */,
 				548F6BCC1E2AFDA60049C66D /* Products */,
 				4A5EF1CCE19C36997357422D /* Pods */,
@@ -185,6 +184,7 @@
 				548F6BD91E2AFDA60049C66D /* LaunchScreen.storyboard */,
 				548F6BDC1E2AFDA60049C66D /* Info.plist */,
 				548F6BFE1E2AFF220049C66D /* GoogleService-Info.plist */,
+				548F6BE41E2AFDA60049C66D /* FirebaseSampleTests */,
 			);
 			path = FirebaseSample;
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 				548F6BE71E2AFDA60049C66D /* Info.plist */,
 			);
 			path = FirebaseSampleTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		548F6BEF1E2AFDA60049C66D /* FirebaseSampleUITests */ = {
 			isa = PBXGroup;
