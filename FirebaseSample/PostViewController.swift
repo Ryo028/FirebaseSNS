@@ -92,15 +92,10 @@ class PostViewController: FormViewController {
     internal func onClick(sender: UIButton) {
         let fireAccess = FireAccess()
         // ekurakaのformの値を取得
-        let formValueDic = form.values()
-        print(String(describing: type(of: formValueDic)))
+        let formValue = form.values()
+        print(String(describing: type(of: formValue)))
 
-//        let name = values["Name"] as! String
-//        let quo = values["Quo"] as! String
-//        let comment = values["Comment"] as! String
-//        let photo = values["Pic"] as! UIImage
-        
-        fireAccess.sentFormData(formValueDic: formValueDic)
-        //initImageView()
+        // 投稿するデータをfirebaseに送信
+        fireAccess.sentFormData(formValueDic: formValue)
     }
 }

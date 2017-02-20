@@ -72,10 +72,12 @@ public class FireAccess {
 
     }
     
+    // 画像に名言と名前を埋め込む処理
     private func drawText(image: UIImage, quoText: String) -> UIImage {
         
         // 文字の太さを指定
         let font = UIFont.boldSystemFont(ofSize: 32)
+        // 描画領域を生成
         let imageRect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
         
         // 画像をPDFに変換
