@@ -37,14 +37,6 @@ class PostViewController: FormViewController {
 //            }()
 //        }
         form +++ Section()
-            <<< ImageRow("Pic") {
-                $0.title = "Image"
-                $0.sourceTypes = .PhotoLibrary
-                $0.clearAction = .no
-            }.cellUpdate { cell, row in
-                    cell.accessoryView?.layer.cornerRadius = 17
-                    cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-                }
             
             <<< TextRow("Name") {
                 $0.title = "Name"
@@ -52,12 +44,23 @@ class PostViewController: FormViewController {
             }.onChange{ row in
                 self.name = row.value
             }
+            
             <<< TextAreaRow("Quo") {
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 100)
                 $0.placeholder = "名言を入れてください"
             }.onChange{ row in
                 self.quotaion = row.value
             }
+        
+            <<< ImageRow("Pic") {
+                $0.title = "Image"
+                $0.sourceTypes = .PhotoLibrary
+                $0.clearAction = .no
+            }.cellUpdate { cell, row in
+                cell.accessoryView?.layer.cornerRadius = 17
+                cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+            }
+
         
         form +++ Section("コメント")
             <<< TextAreaRow("Comment") {
@@ -66,12 +69,13 @@ class PostViewController: FormViewController {
             }.onChange{ row in
                 self.comment = row.value
             }
+        
         form +++ Section()
             <<< ButtonRow() {
                 $0.title = "プレビュー"
-                }.onCellSelection({ (cell, row) in
-                    self.performSegue(withIdentifier: "ToPreview", sender: self)
-                })        
+            }.onCellSelection({ (cell, row) in
+                self.performSegue(withIdentifier: "ToPreview", sender: self)
+            })
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,7 +87,7 @@ class PostViewController: FormViewController {
         let formValue = form.values()
         if segue.identifier == "ToPreview" {
             let previewController = segue.destination as! PreViewController
-            //let previewImg = (formValue["Pic"] as! UIImage)
+            // フォームのデータを次の画面に渡す
             previewController.formDataDic = formValue
         }
     }

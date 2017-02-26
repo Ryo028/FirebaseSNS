@@ -29,10 +29,12 @@ class PreViewController: UIViewController, UIScrollViewDelegate {
         let name = (self.formDataDic["Name"] as! String)
         let quo = (self.formDataDic["Quo"] as! String)
         let imageData = self.formDataDic["Pic"]
-        print(name)
         self.previewQuo.text = quo
         self.previewName.text = name
-        self.previewImageView.image = imageData as? UIImage
+        
+        let quoImage = imageData as? UIImage
+        
+        self.previewImageView.image = drawText(image: quoImage!, quoText: quo)
         
     }
 
@@ -64,6 +66,36 @@ class PreViewController: UIViewController, UIScrollViewDelegate {
         //        self.previewImage.addGestureRecognizer(doubleTapGesture)
 
     }
+    
+    // 画像に名言と名前を埋め込む処理
+    private func drawText(image: UIImage, quoText: String) -> UIImage {
+        
+        // 文字の太さを指定
+//        let font = UIFont.boldSystemFont(ofSize: 32)
+        // 描画領域を生成
+        let imageRect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+        
+        // 画像をPDFに変換
+        UIGraphicsBeginImageContext(image.size)
+        image.draw(in: imageRect)
+        
+        let quoRect = CGRect(x: 50, y: 50, width: image.size.width, height: image.size.height)
+//        let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+//        let textFontAttributes = [
+//            NSFontAttributeName: font,
+//            NSForegroundColorAttributeName: UIColor.white,
+//            NSParagraphStyleAttributeName: textStyle
+//        ]
+        //quoText.draw(in: quoRect, withAttributes: textFontAttributes)
+        
+        self.previewQuo.draw(quoRect)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+
     
     // ズーム中のビューを返す
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
