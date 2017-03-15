@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		1AF65BD2DC7B52EE7E40541B /* Pods_FirebaseSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1065263A7A9CF5EFF7BE65C8 /* Pods_FirebaseSampleTests.framework */; };
 		246B219E60783C71B9019BB2 /* Pods_FirebaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA0EEFE953DB48843069E37 /* Pods_FirebaseSample.framework */; };
+		2A19EDE11E745AB400FDB2CD /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19EDE01E745AB400FDB2CD /* SubViewController.swift */; };
+		2A6A47C61E62C3F300D547F0 /* TopViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */; };
 		544DEE211E46F54C003B6660 /* cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 544DEE201E46F54C003B6660 /* cat.jpeg */; };
 		544DEE231E46FEDC003B6660 /* jobs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544DEE221E46FEDC003B6660 /* jobs.jpg */; };
 		5461CA511E4F811100B8C1C2 /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461CA501E4F811100B8C1C2 /* PreViewController.swift */; };
 		548F6BCF1E2AFDA60049C66D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548F6BCE1E2AFDA60049C66D /* AppDelegate.swift */; };
-		548F6BD11E2AFDA60049C66D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548F6BD01E2AFDA60049C66D /* FirstViewController.swift */; };
+		548F6BD11E2AFDA60049C66D /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548F6BD01E2AFDA60049C66D /* TopViewController.swift */; };
 		548F6BD31E2AFDA60049C66D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548F6BD21E2AFDA60049C66D /* SecondViewController.swift */; };
 		548F6BD61E2AFDA60049C66D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548F6BD41E2AFDA60049C66D /* Main.storyboard */; };
 		548F6BD81E2AFDA60049C66D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548F6BD71E2AFDA60049C66D /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		1065263A7A9CF5EFF7BE65C8 /* Pods_FirebaseSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A19EDE01E745AB400FDB2CD /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewLogic.swift; sourceTree = "<group>"; };
 		4FA0EEFE953DB48843069E37 /* Pods_FirebaseSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FF73DFDEB2EEAE2CDFD62F /* Pods-FirebaseSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleTests/Pods-FirebaseSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		544DEE201E46F54C003B6660 /* cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpeg; sourceTree = "<group>"; };
@@ -62,7 +66,7 @@
 		5461CA501E4F811100B8C1C2 /* PreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
 		548F6BCB1E2AFDA60049C66D /* FirebaseSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		548F6BCE1E2AFDA60049C66D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		548F6BD01E2AFDA60049C66D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		548F6BD01E2AFDA60049C66D /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		548F6BD21E2AFDA60049C66D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		548F6BD51E2AFDA60049C66D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		548F6BD71E2AFDA60049C66D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +127,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A19EDE21E745AB800FDB2CD /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				548F6BD01E2AFDA60049C66D /* TopViewController.swift */,
+				2A19EDE01E745AB400FDB2CD /* SubViewController.swift */,
+				2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */,
+			);
+			name = Top;
+			sourceTree = "<group>";
+		};
 		4A5EF1CCE19C36997357422D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +236,7 @@
 		54EB35FB1E2BAC5300D24034 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				548F6BD01E2AFDA60049C66D /* FirstViewController.swift */,
+				2A19EDE21E745AB800FDB2CD /* Top */,
 				548F6BD21E2AFDA60049C66D /* SecondViewController.swift */,
 				548F6C001E2B06DB0049C66D /* SignupViewController.swift */,
 				548F6C021E2B29FD0049C66D /* LoginViewController.swift */,
@@ -523,6 +537,7 @@
 			files = (
 				54E8521D1E3E3EAA00AB02E8 /* PostViewController.swift in Sources */,
 				548F6BD31E2AFDA60049C66D /* SecondViewController.swift in Sources */,
+				2A6A47C61E62C3F300D547F0 /* TopViewLogic.swift in Sources */,
 				548F6BCF1E2AFDA60049C66D /* AppDelegate.swift in Sources */,
 				54B122B61E3C8370004F31D9 /* TargetTableViewCell.swift in Sources */,
 				54A11B481E43925C00C5939B /* FireAccess.swift in Sources */,
@@ -530,7 +545,8 @@
 				548F6C011E2B06DB0049C66D /* SignupViewController.swift in Sources */,
 				548F6C031E2B29FD0049C66D /* LoginViewController.swift in Sources */,
 				54BE4A931E3443EE005A18B8 /* CardCollectionViewCell.swift in Sources */,
-				548F6BD11E2AFDA60049C66D /* FirstViewController.swift in Sources */,
+				548F6BD11E2AFDA60049C66D /* TopViewController.swift in Sources */,
+				2A19EDE11E745AB400FDB2CD /* SubViewController.swift in Sources */,
 				5461CA511E4F811100B8C1C2 /* PreViewController.swift in Sources */,
 				549D99711E3CDA9600B63142 /* TargetContentView.swift in Sources */,
 				54B122B41E3C7BB5004F31D9 /* ProfileViewController.swift in Sources */,

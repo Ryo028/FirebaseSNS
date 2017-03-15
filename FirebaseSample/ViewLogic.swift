@@ -11,6 +11,7 @@ import UIKit
 
 class ViewLogic: ProfileViewController {
     
+    
     public func test() -> String {
         let test = "テスと"
         return test

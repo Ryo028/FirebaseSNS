@@ -16,9 +16,22 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bottomBar: Bar!
     @IBOutlet weak var cardImage: ImageCard!
     @IBOutlet weak var normalImage: UIImageView!
+    @IBOutlet weak var quoTextView: UITextView!
     
-//    public func setMaterialCell() {
-//        cardView.bottomBar = bottomBar
-//    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+
+    }
+    
+    public func setTextViewStyle() {
+        self.quoTextView.isEditable = false
+        self.quoTextView.isScrollEnabled = false
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.lineSpacing = 10.0
+        
+        // スタイルをセット
+        let attributes: Dictionary = [NSParagraphStyleAttributeName: textStyle]
+        self.quoTextView.attributedText = NSAttributedString(string: quoTextView.text, attributes: attributes)
+    }
     
 }

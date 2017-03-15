@@ -43,9 +43,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         // セルの取得
         let cell: TargetTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TargetCell") as! TargetTableViewCell
-        
-        
-        
         // セルに表示する値を設定する
         //cell.myLabel2.text = texts[indexPath.row]
         

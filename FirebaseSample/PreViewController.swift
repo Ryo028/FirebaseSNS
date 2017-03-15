@@ -17,10 +17,15 @@ class PreViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var previewName: UILabel!
     
     public var formDataDic: [String: Any]! = [:]
+    private var myRightButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        myRightButton = UIBarButtonItem(title: "投稿", style: .plain, target: self, action: #selector(PreViewController.onClick(sender:)))
+        self.navigationItem.rightBarButtonItem = myRightButton
+
+        
         // プレビューの画面設定
         self.setPreviewScroll()
         
@@ -28,14 +33,14 @@ class PreViewController: UIViewController, UIScrollViewDelegate {
         
         let name = (self.formDataDic["Name"] as! String)
         let quo = (self.formDataDic["Quo"] as! String)
-        let imageData = self.formDataDic["Pic"]
+        let imageData = self.formDataDic["Pic"] as? UIImage
         self.previewQuo.text = quo
         self.previewName.text = name
         
-        let quoImage = imageData as? UIImage
-        
-        self.previewImageView.image = drawText(image: quoImage!, quoText: quo)
-        
+        // 画像に名言を埋め込み
+        let quoImage = drawText(image: imageData!, quoText: quo)
+        self.previewImageView.image = quoImage
+        self.formDataDic["Pic"] = quoImage
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,11 +72,23 @@ class PreViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
+    // 投稿処理
+    internal func onClick(sender: UIButton) {
+        let fireAccess = FireAccess()
+
+        // ekurakaのformの値を取得
+        //let formValue = form.values()
+        //print(String(describing: type(of: formValue)))
+        
+        // 投稿するデータをfirebaseに送信
+        fireAccess.sentFormData(formValueDic: self.formDataDic)
+    }
+    
     // 画像に名言と名前を埋め込む処理
     private func drawText(image: UIImage, quoText: String) -> UIImage {
         
         // 文字の太さを指定
-//        let font = UIFont.boldSystemFont(ofSize: 32)
+        let font = UIFont.boldSystemFont(ofSize: 25)
         // 描画領域を生成
         let imageRect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
         
@@ -79,16 +96,16 @@ class PreViewController: UIViewController, UIScrollViewDelegate {
         UIGraphicsBeginImageContext(image.size)
         image.draw(in: imageRect)
         
-        let quoRect = CGRect(x: 50, y: 50, width: image.size.width, height: image.size.height)
-//        let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
-//        let textFontAttributes = [
-//            NSFontAttributeName: font,
-//            NSForegroundColorAttributeName: UIColor.white,
-//            NSParagraphStyleAttributeName: textStyle
-//        ]
-        //quoText.draw(in: quoRect, withAttributes: textFontAttributes)
+        let quoRect = CGRect(x: 0, y: CGFloat(image.size.height / 2), width: image.size.width - 5 , height: image.size.height)
+        let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+        let textFontAttributes = [
+            NSFontAttributeName: font,
+            NSForegroundColorAttributeName: UIColor.white,
+            NSParagraphStyleAttributeName: textStyle
+        ]
+        quoText.draw(in: quoRect, withAttributes: textFontAttributes)
         
-        self.previewQuo.draw(quoRect)
+        //self.previewQuo.draw(imageRect)
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext()
