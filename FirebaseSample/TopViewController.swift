@@ -9,6 +9,7 @@
 import UIKit
 import Material
 import Firebase
+import FirebaseStorageUI
 
 class TopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -18,6 +19,7 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
     var contentArray: [FIRDataSnapshot] = []
     let ref = FIRDatabase.database().reference()
     let userID = (FIRAuth.auth()?.currentUser?.uid)!
+    
     
 //    let storage = FIRStorage.storage()
     let storageRef = FIRStorage.storage().reference(forURL: "gs://fir-sample-1e7e7.appspot.com")
@@ -86,18 +88,28 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
         // 名言を表示
         cell.quoTextView.text = (content["Quotation"] as! String)
         
-        
         let imageRef = storageRef.child("images/" + userID + "/" + personImgNo)
-        imageRef.data(withMaxSize: 20 * 1024 * 1024) { (data, error) in
-            if error == nil {
-                //                cell.cardView.contentView = cell.cardImage
-                //                cell.cardView.image = UIImage.init(data: data!)
-                self.imageArray.append(UIImage.init(data: data!)!)
-                cell.normalImage.image = UIImage.init(data: data!)
+        imageRef.downloadURL { (URL, error) -> Void in
+            if (error != nil) {
+                // Handle any errors
             } else {
-                print(error as Any)
+                // 画像のダウンロード、キャッシュ
+                cell.normalImage.sd_setImage(with: URL, placeholderImage: nil)
             }
         }
+        
+//        imageRef.data(withMaxSize: 20 * 1024 * 1024) { (data, error) in
+//            if error == nil {
+//                //                cell.cardView.contentView = cell.cardImage
+//                //                cell.cardView.image = UIImage.init(data: data!)
+//                self.imageArray.append(UIImage.init(data: data!)!)
+//                //cell.normalImage.image = UIImage.init(data: data!)
+//                cell.normalImage.image = UIImage.init(data: data!)
+//                //cell.normalImage.
+//            } else {
+//                print(error as Any)
+//            }
+//        }
         
         return cell
     }

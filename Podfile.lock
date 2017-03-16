@@ -30,6 +30,9 @@ PODS:
   - FirebaseStorage (1.1.0):
     - FirebaseAnalytics (~> 3.7)
     - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseUI/Storage (0.7.0):
+    - Firebase/Storage
+    - SDWebImage
   - GoogleToolboxForMac/DebugUtils (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/Defines (2.1.1)
@@ -46,6 +49,9 @@ PODS:
   - Material (2.5.2):
     - Material/Core (= 2.5.2)
   - Material/Core (2.5.2)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - Eureka (~> 2.0.0-beta.1)
@@ -53,6 +59,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - FirebaseUI/Storage (~> 0.6)
   - ImageRow (~> 1.0)
   - Material (~> 2.0)
 
@@ -65,11 +72,13 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
+  FirebaseUI: 6b22f02b8992fd921116b59e8dcda688c4072517
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   ImageRow: 1e37db26f61a0c4ad3bc9a3a803c32d968782857
   Material: 00ae261fa04dd3f3f8584d07e44ac658fa1bc6fd
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 410da21c3b9bbef1f455621df8a42192219ebda4
+PODFILE CHECKSUM: bb96c97eed52a55eff4e724d56f03cb7f3550f56
 
 COCOAPODS: 1.1.1

@@ -59,8 +59,9 @@
 		1065263A7A9CF5EFF7BE65C8 /* Pods_FirebaseSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A19EDE01E745AB400FDB2CD /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewLogic.swift; sourceTree = "<group>"; };
+		2E8329DE99481518F1C5AE92 /* Pods-FirebaseSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleUITests/Pods-FirebaseSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		30DCAC73904BEB249AA4BB4E /* Pods-FirebaseSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSample/Pods-FirebaseSample.debug.xcconfig"; sourceTree = "<group>"; };
 		4FA0EEFE953DB48843069E37 /* Pods_FirebaseSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		51FF73DFDEB2EEAE2CDFD62F /* Pods-FirebaseSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleTests/Pods-FirebaseSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		544DEE201E46F54C003B6660 /* cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpeg; sourceTree = "<group>"; };
 		544DEE221E46FEDC003B6660 /* jobs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jobs.jpg; sourceTree = "<group>"; };
 		5461CA501E4F811100B8C1C2 /* PreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
@@ -91,12 +92,11 @@
 		54D274BF1E4ED72A003F4F4F /* steve-jobs-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steve-jobs-8.jpg"; sourceTree = "<group>"; };
 		54D445901E3D09B500227D66 /* ViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLogic.swift; sourceTree = "<group>"; };
 		54E8521C1E3E3EAA00AB02E8 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		6303691D97629B1805827936 /* Pods-FirebaseSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleUITests/Pods-FirebaseSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		74C242D1D45F81741DD025CF /* Pods-FirebaseSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSample/Pods-FirebaseSample.debug.xcconfig"; sourceTree = "<group>"; };
+		62C064A07A7D81CA49C5D29B /* Pods-FirebaseSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleUITests/Pods-FirebaseSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		851E574D459E57E64766ED52 /* Pods-FirebaseSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleTests/Pods-FirebaseSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B684902E8991F7945C04EDD /* Pods-FirebaseSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleTests/Pods-FirebaseSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4E27C16CD1F23E799931545 /* Pods-FirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSample/Pods-FirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
 		D260CD8522BFB331541403D0 /* Pods_FirebaseSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9AB70120A5531283113682D /* Pods-FirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSample/Pods-FirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
-		FA48EC972C68FB6711F64036 /* Pods-FirebaseSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleUITests/Pods-FirebaseSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FD833A39C7F94E3FF3BF43B6 /* Pods-FirebaseSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleTests/Pods-FirebaseSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,19 +137,6 @@
 			name = Top;
 			sourceTree = "<group>";
 		};
-		4A5EF1CCE19C36997357422D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				74C242D1D45F81741DD025CF /* Pods-FirebaseSample.debug.xcconfig */,
-				F9AB70120A5531283113682D /* Pods-FirebaseSample.release.xcconfig */,
-				FD833A39C7F94E3FF3BF43B6 /* Pods-FirebaseSampleTests.debug.xcconfig */,
-				51FF73DFDEB2EEAE2CDFD62F /* Pods-FirebaseSampleTests.release.xcconfig */,
-				FA48EC972C68FB6711F64036 /* Pods-FirebaseSampleUITests.debug.xcconfig */,
-				6303691D97629B1805827936 /* Pods-FirebaseSampleUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		4C10237E7C7DD3D2204BD7C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +153,8 @@
 				548F6BCD1E2AFDA60049C66D /* FirebaseSample */,
 				548F6BEF1E2AFDA60049C66D /* FirebaseSampleUITests */,
 				548F6BCC1E2AFDA60049C66D /* Products */,
-				4A5EF1CCE19C36997357422D /* Pods */,
 				4C10237E7C7DD3D2204BD7C9 /* Frameworks */,
+				CAEA6B11D1C343CEB9EDB8A7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,6 +231,19 @@
 				54D274BE1E4ECF9C003F4F4F /* Profile */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CAEA6B11D1C343CEB9EDB8A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30DCAC73904BEB249AA4BB4E /* Pods-FirebaseSample.debug.xcconfig */,
+				A4E27C16CD1F23E799931545 /* Pods-FirebaseSample.release.xcconfig */,
+				851E574D459E57E64766ED52 /* Pods-FirebaseSampleTests.debug.xcconfig */,
+				8B684902E8991F7945C04EDD /* Pods-FirebaseSampleTests.release.xcconfig */,
+				62C064A07A7D81CA49C5D29B /* Pods-FirebaseSampleUITests.debug.xcconfig */,
+				2E8329DE99481518F1C5AE92 /* Pods-FirebaseSampleUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -702,7 +702,7 @@
 		};
 		548F6BF61E2AFDA60049C66D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74C242D1D45F81741DD025CF /* Pods-FirebaseSample.debug.xcconfig */;
+			baseConfigurationReference = 30DCAC73904BEB249AA4BB4E /* Pods-FirebaseSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -719,7 +719,7 @@
 		};
 		548F6BF71E2AFDA60049C66D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9AB70120A5531283113682D /* Pods-FirebaseSample.release.xcconfig */;
+			baseConfigurationReference = A4E27C16CD1F23E799931545 /* Pods-FirebaseSample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -736,7 +736,7 @@
 		};
 		548F6BF91E2AFDA60049C66D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD833A39C7F94E3FF3BF43B6 /* Pods-FirebaseSampleTests.debug.xcconfig */;
+			baseConfigurationReference = 851E574D459E57E64766ED52 /* Pods-FirebaseSampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -754,7 +754,7 @@
 		};
 		548F6BFA1E2AFDA60049C66D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51FF73DFDEB2EEAE2CDFD62F /* Pods-FirebaseSampleTests.release.xcconfig */;
+			baseConfigurationReference = 8B684902E8991F7945C04EDD /* Pods-FirebaseSampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -772,7 +772,7 @@
 		};
 		548F6BFC1E2AFDA60049C66D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA48EC972C68FB6711F64036 /* Pods-FirebaseSampleUITests.debug.xcconfig */;
+			baseConfigurationReference = 62C064A07A7D81CA49C5D29B /* Pods-FirebaseSampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -789,7 +789,7 @@
 		};
 		548F6BFD1E2AFDA60049C66D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6303691D97629B1805827936 /* Pods-FirebaseSampleUITests.release.xcconfig */;
+			baseConfigurationReference = 2E8329DE99481518F1C5AE92 /* Pods-FirebaseSampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

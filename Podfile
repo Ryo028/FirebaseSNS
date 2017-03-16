@@ -10,7 +10,7 @@ pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod "Firebase/Storage"
-#pod 'FirebaseUI/Storage', '~> 0.6'
+pod 'FirebaseUI/Storage', '~> 0.6'
 pod 'Material', '~> 2.0'
 pod 'Eureka', '~> 2.0.0-beta.1'
 pod 'ImageRow', '~> 1.0'
