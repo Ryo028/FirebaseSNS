@@ -52,6 +52,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - ZoomTransitioning (1.4.1)
 
 DEPENDENCIES:
   - Eureka (~> 2.0.0-beta.1)
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - FirebaseUI/Storage (~> 0.6)
   - ImageRow (~> 1.0)
   - Material (~> 2.0)
+  - ZoomTransitioning
 
 SPEC CHECKSUMS:
   Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
@@ -78,7 +80,8 @@ SPEC CHECKSUMS:
   ImageRow: 1e37db26f61a0c4ad3bc9a3a803c32d968782857
   Material: 00ae261fa04dd3f3f8584d07e44ac658fa1bc6fd
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  ZoomTransitioning: 42d9ad29c83d896f3fe28c324a4fe98ac821f0dd
 
-PODFILE CHECKSUM: bb96c97eed52a55eff4e724d56f03cb7f3550f56
+PODFILE CHECKSUM: 147ecc7c8d678d5bb288d3a961b5d661263d9517
 
 COCOAPODS: 1.1.1

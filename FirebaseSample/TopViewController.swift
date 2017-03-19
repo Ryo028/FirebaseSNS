@@ -10,24 +10,24 @@ import UIKit
 import Material
 import Firebase
 import FirebaseStorageUI
+import ZoomTransitioning
 
 class TopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var CardCollectionView: UICollectionView!
+    fileprivate var selectedImageView: UIImageView?
     
     // fetchしたデータを入れておく配列
     var contentArray: [FIRDataSnapshot] = []
     let ref = FIRDatabase.database().reference()
     let userID = (FIRAuth.auth()?.currentUser?.uid)!
     
-    
-//    let storage = FIRStorage.storage()
-    let storageRef = FIRStorage.storage().reference(forURL: "gs://fir-sample-1e7e7.appspot.com")
-    
     var ciContext: CIContext!
     // 個別のデータ
     var topContentDic: [String: Any]! = [:]
-    var imageArray: [UIImage] = []
+    var imageURLArray: [URL] = []
+
+    let storageRef = FIRStorage.storage().reference(forURL: "gs://fir-sample-1e7e7.appspot.com")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,17 +43,16 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+        selectedImageView = cell.normalImage
+        
         let item = contentArray[indexPath.row]
-        let itemImage = imageArray[indexPath.row]
-        topContentDic = item.value as! Dictionary<String, AnyObject>
-        topContentDic["Image"] = itemImage
+        self.topContentDic = item.value as! Dictionary<String, AnyObject>
         self.performSegue(withIdentifier: "ToSubView", sender: self)
         
-        print(topContentDic)
-        
-//        print("Num: \(indexPath.row)")
-//        print("Value:\(collectionView)")
-        
+        //        print("Num: \(indexPath.row)")
+        //        print("Value:\(collectionView)")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -85,7 +84,7 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
         let item = contentArray[indexPath.row]
         let content = item.value as! Dictionary<String, AnyObject>
         let personImgNo = (content["PersonImg"] as! String)
-        // 名言を表示
+        // 言葉を表示
         cell.quoTextView.text = (content["Quotation"] as! String)
         
         let imageRef = storageRef.child("images/" + userID + "/" + personImgNo)
@@ -98,26 +97,8 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
             }
         }
         
-//        imageRef.data(withMaxSize: 20 * 1024 * 1024) { (data, error) in
-//            if error == nil {
-//                //                cell.cardView.contentView = cell.cardImage
-//                //                cell.cardView.image = UIImage.init(data: data!)
-//                self.imageArray.append(UIImage.init(data: data!)!)
-//                //cell.normalImage.image = UIImage.init(data: data!)
-//                cell.normalImage.image = UIImage.init(data: data!)
-//                //cell.normalImage.
-//            } else {
-//                print(error as Any)
-//            }
-//        }
-        
         return cell
     }
-
-//    // 背景画像の名前を取得
-//    func getImage(number: String) -> UIImage {
-//        var iamge: UIImage
-//    }
     
     // データの読み込み処理
     func read() {
@@ -177,6 +158,35 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
 //        let imageRef = self.ciContext.createCGImage((filter?.outputImage)!, from: (filter?.outputImage!.extent)!)
 //        let outputImage = UIImage(cgImage: imageRef!)
     }
+}
+
+
+extension TopViewController: ZoomTransitionSourceDelegate {
     
+    // アニメーション対象のUIImageViewを返す
+    func transitionSourceImageView() -> UIImageView {
+        return selectedImageView ?? UIImageView()
+    }
+    
+    // スクリーンに対するアニメーション開始位置を返す
+    func transitionSourceImageViewFrame(forward: Bool) -> CGRect {
+        guard let selectedImageView = selectedImageView else { return CGRect.zero }
+        return selectedImageView.convert(selectedImageView.bounds, to: view)
+    }
+    
+    // 画面遷移直前
+    func transitionSourceWillBegin() {
+        selectedImageView?.isHidden = true
+    }
+    
+    // 画面遷移完了後
+    func transitionSourceDidEnd() {
+        selectedImageView?.isHidden = false
+    }
+    
+    // 画面遷移キャンセル後
+    func transitionSourceDidCancel() {
+        selectedImageView?.isHidden = false
+    }
 }
 

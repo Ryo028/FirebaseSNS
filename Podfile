@@ -14,6 +14,8 @@ pod 'FirebaseUI/Storage', '~> 0.6'
 pod 'Material', '~> 2.0'
 pod 'Eureka', '~> 2.0.0-beta.1'
 pod 'ImageRow', '~> 1.0'
+pod 'ZoomTransitioning'
+
 
   target 'FirebaseSampleTests' do
     inherit! :search_paths

@@ -9,6 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="YPF-an-RdH">
+            <objects>
+                <navigationController id="PrX-QH-9ox" customClass="TopNavigationViewController" customModule="FirebaseSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Dix-9C-rNH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="76s-MU-GQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="iPp-ko-HfX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0a6-77-byY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-916" y="-735"/>
+        </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -17,7 +34,7 @@
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -110,14 +127,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="GG0-eH-xE5"/>
                     <connections>
                         <outlet property="CardCollectionView" destination="232-Lm-cEZ" id="UMm-gQ-3e3"/>
-                        <segue destination="zjb-KM-zAr" kind="presentation" identifier="ToSubView" id="L8U-eH-lJR"/>
+                        <segue destination="zjb-KM-zAr" kind="show" identifier="ToSubView" id="L8U-eH-lJR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-854" y="-752"/>
+            <point key="canvasLocation" x="-188" y="-735"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="c7s-d9-ARq">
@@ -176,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pi-wk-Cxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="-752"/>
+            <point key="canvasLocation" x="570" y="-735"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -609,9 +627,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="6zO-5g-8IC" kind="relationship" relationship="viewControllers" id="W1f-Ch-4D5"/>
+                        <segue destination="PrX-QH-9ox" kind="relationship" relationship="viewControllers" id="ucs-ve-3Za"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="u64-db-ZFg"/>
+                        <segue destination="6zO-5g-8IC" kind="relationship" relationship="viewControllers" id="ib0-Pa-5Vp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorageUI
+import ZoomTransitioning
 
 class SubViewController: UIViewController {
 
@@ -16,12 +19,14 @@ class SubViewController: UIViewController {
     
     public var contentDic: [String: Any]! = [:]
     
+    let storageRef = FIRStorage.storage().reference(forURL: "gs://fir-sample-1e7e7.appspot.com")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        subImageView.image = contentDic["Image"] as? UIImage
         subTextView.text = contentDic["Quotation"] as? String
         subLable.text = contentDic["Name"] as? String
+        
         print(contentDic)
     }
 
@@ -29,16 +34,35 @@ class SubViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+extension SubViewController: ZoomTransitionDestinationDelegate {
+    
+    func transitionDestinationImageViewFrame(forward: Bool) -> CGRect {
+        if forward {
+//            let x: CGFloat = 0.0
+//            let y = topLayoutGuide.length
+//            let width = view.frame.width
+//            let height = width * 2.0 / 3.0
+//            return CGRect(x: x, y: y, width: width, height: height)
+            return subImageView.convert(subImageView.bounds, to: view)
+        } else {
+            return subImageView.convert(subImageView.bounds, to: view)
+        }
+    }
+    
+    func transitionDestinationWillBegin() {
+        subImageView.isHidden = true
+    }
+    
+    func transitionDestinationDidEnd(transitioningImageView imageView: UIImageView) {
+        subImageView.isHidden = false
+        subImageView.image = imageView.image
+    }
+    
+    func transitionDestinationDidCancel() {
+        subImageView.isHidden = false
+    }
+}
+

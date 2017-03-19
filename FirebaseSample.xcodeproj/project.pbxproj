@@ -11,6 +11,7 @@
 		246B219E60783C71B9019BB2 /* Pods_FirebaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA0EEFE953DB48843069E37 /* Pods_FirebaseSample.framework */; };
 		2A19EDE11E745AB400FDB2CD /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19EDE01E745AB400FDB2CD /* SubViewController.swift */; };
 		2A6A47C61E62C3F300D547F0 /* TopViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */; };
+		2AD402621E7E307B0080343D /* TopNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD402611E7E307B0080343D /* TopNavigationViewController.swift */; };
 		544DEE211E46F54C003B6660 /* cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 544DEE201E46F54C003B6660 /* cat.jpeg */; };
 		544DEE231E46FEDC003B6660 /* jobs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544DEE221E46FEDC003B6660 /* jobs.jpg */; };
 		5461CA511E4F811100B8C1C2 /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461CA501E4F811100B8C1C2 /* PreViewController.swift */; };
@@ -59,6 +60,7 @@
 		1065263A7A9CF5EFF7BE65C8 /* Pods_FirebaseSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A19EDE01E745AB400FDB2CD /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewLogic.swift; sourceTree = "<group>"; };
+		2AD402611E7E307B0080343D /* TopNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopNavigationViewController.swift; sourceTree = "<group>"; };
 		2E8329DE99481518F1C5AE92 /* Pods-FirebaseSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSampleUITests/Pods-FirebaseSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30DCAC73904BEB249AA4BB4E /* Pods-FirebaseSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSample/Pods-FirebaseSample.debug.xcconfig"; sourceTree = "<group>"; };
 		4FA0EEFE953DB48843069E37 /* Pods_FirebaseSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,8 @@
 				548F6BD01E2AFDA60049C66D /* TopViewController.swift */,
 				2A19EDE01E745AB400FDB2CD /* SubViewController.swift */,
 				2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */,
+				2AD402611E7E307B0080343D /* TopNavigationViewController.swift */,
+				54BE4A921E3443EE005A18B8 /* CardCollectionViewCell.swift */,
 			);
 			name = Top;
 			sourceTree = "<group>";
@@ -227,7 +231,6 @@
 				548F6BD21E2AFDA60049C66D /* SecondViewController.swift */,
 				548F6C001E2B06DB0049C66D /* SignupViewController.swift */,
 				548F6C021E2B29FD0049C66D /* LoginViewController.swift */,
-				54BE4A921E3443EE005A18B8 /* CardCollectionViewCell.swift */,
 				54D274BE1E4ECF9C003F4F4F /* Profile */,
 			);
 			name = ViewController;
@@ -550,6 +553,7 @@
 				5461CA511E4F811100B8C1C2 /* PreViewController.swift in Sources */,
 				549D99711E3CDA9600B63142 /* TargetContentView.swift in Sources */,
 				54B122B41E3C7BB5004F31D9 /* ProfileViewController.swift in Sources */,
+				2AD402621E7E307B0080343D /* TopNavigationViewController.swift in Sources */,
 				54BE4A951E34D260005A18B8 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
