@@ -12,26 +12,30 @@ import Firebase
 import FirebaseStorageUI
 import ZoomTransitioning
 
-class TopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class TopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching {
 
     @IBOutlet weak var CardCollectionView: UICollectionView!
+    fileprivate var topBottomBar: Bar!
     fileprivate var selectedImageView: UIImageView?
-    
+        
+    let ref = FIRDatabase.database().reference()
+    let storageRef = FIRStorage.storage().reference(forURL: "gs://fir-sample-1e7e7.appspot.com")
+    let userID = (FIRAuth.auth()?.currentUser?.uid)!
+
     // fetchしたデータを入れておく配列
     var contentArray: [FIRDataSnapshot] = []
-    let ref = FIRDatabase.database().reference()
-    let userID = (FIRAuth.auth()?.currentUser?.uid)!
     
     var ciContext: CIContext!
     // 個別のデータ
     var topContentDic: [String: Any]! = [:]
-    var imageURLArray: [URL] = []
-
-    let storageRef = FIRStorage.storage().reference(forURL: "gs://fir-sample-1e7e7.appspot.com")
+    
+    var cells: CardCollectionViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        CardCollectionView.prefetchDataSource = self
+        
         // データの読み込み処理
         self.read()
     }
@@ -76,29 +80,49 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         let topViewLogic = TopViewLogic()
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
+        self.cells = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
         // テキストビューのスタイルを設定
-        topViewLogic.setQuoTextViewStyle(cell: cell)
+        topViewLogic.setQuoTextViewStyle(cell: cells)
         
         let item = contentArray[indexPath.row]
         let content = item.value as! Dictionary<String, AnyObject>
-        let personImgNo = (content["PersonImg"] as! String)
-        // 言葉を表示
-        cell.quoTextView.text = (content["Quotation"] as! String)
+        //let personImgNo = (content["PersonImg"] as! String)
         
-        let imageRef = storageRef.child("images/" + userID + "/" + personImgNo)
-        imageRef.downloadURL { (URL, error) -> Void in
-            if (error != nil) {
-                // Handle any errors
-            } else {
-                // 画像のダウンロード、キャッシュ
-                cell.normalImage.sd_setImage(with: URL, placeholderImage: nil)
+        //self.cells = cell
+        //print("cellForItemAt----------------------------------------------")
+        
+        return cells
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
+        for indexPath in indexPaths {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
+
+            let item = contentArray[indexPath.row]
+            let content = item.value as! Dictionary<String, AnyObject>
+            
+            // 言葉を表示
+            cells.quoTextView.text = (content["Quotation"] as! String)
+
+            let personImgNo = (content["PersonImg"] as! String)
+            
+            let imageRef = storageRef.child("images/" + userID + "/" + personImgNo)
+            imageRef.downloadURL { (URL, error) -> Void in
+                if (error != nil) {
+                    // Handle any errors
+                } else {
+                    // 画像のダウンロード、キャッシュ
+                    self.cells.normalImage.sd_setImage(with: URL, placeholderImage: nil)
+                }
             }
+            
         }
         
-        return cell
+
     }
+    
     
     // データの読み込み処理
     func read() {
@@ -160,7 +184,7 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
 }
 
-
+// TopViewを拡張
 extension TopViewController: ZoomTransitionSourceDelegate {
     
     // アニメーション対象のUIImageViewを返す

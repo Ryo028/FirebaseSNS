@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="PrX-QH-9ox" customClass="TopNavigationViewController" customModule="FirebaseSample" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Dix-9C-rNH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="76s-MU-GQ6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="76s-MU-GQ6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -57,7 +57,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vLl-19-e9N" customClass="Card" customModule="Material">
-                                                    <rect key="frame" x="0.0" y="0.0" width="169" height="267"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="169" height="275"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4x-kd-7db">
@@ -65,8 +65,27 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="0.90980392156862744" green="0.92549019607843142" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                                         </imageView>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-qa-LvP">
+                                                            <rect key="frame" x="9" y="129" width="154" height="82"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="もし今日が人生最後の日だとしたら、今やろうとしている">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" size="12" name="HiraMinProN-W6"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User.png" translatesAutoresizingMaskIntoConstraints="NO" id="umm-J2-BEf">
+                                                            <rect key="frame" x="8" y="237" width="30" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
                                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ni-IF-dc6">
-                                                            <rect key="frame" x="45" y="237" width="116" height="30"/>
+                                                            <rect key="frame" x="47" y="238" width="116" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Roy Miyata さんが投稿しました。">
@@ -84,25 +103,6 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User.png" translatesAutoresizingMaskIntoConstraints="NO" id="umm-J2-BEf">
-                                                            <rect key="frame" x="7" y="237" width="30" height="30"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-qa-LvP">
-                                                            <rect key="frame" x="9" y="129" width="154" height="82"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            <attributedString key="attributedText">
-                                                                <fragment content="もし今日が人生最後の日だとしたら、今やろうとしている">
-                                                                    <attributes>
-                                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <font key="NSFont" size="12" name="HiraMinProN-W6"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -115,6 +115,8 @@
                                             <outlet property="cardView" destination="vLl-19-e9N" id="yri-bM-srB"/>
                                             <outlet property="normalImage" destination="V4x-kd-7db" id="StU-3o-FYf"/>
                                             <outlet property="quoTextView" destination="NeX-qa-LvP" id="zzz-7B-o7L"/>
+                                            <outlet property="userImageView" destination="umm-J2-BEf" id="mrV-MF-Ew4"/>
+                                            <outlet property="userMsgLabel" destination="6ni-IF-dc6" id="DKJ-Lf-2hc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -135,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-188" y="-735"/>
+            <point key="canvasLocation" x="-188" y="-735.38230884557731"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="c7s-d9-ARq">
@@ -480,7 +482,7 @@
             <objects>
                 <navigationController id="6zO-5g-8IC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pyL-A0-W3H"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UZ1-99-eST">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UZ1-99-eST">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -604,7 +606,7 @@
         <scene sceneID="kxK-No-nSJ">
             <objects>
                 <navigationController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7d2-tG-5YK" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UZ4-CU-W6s">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UZ4-CU-W6s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

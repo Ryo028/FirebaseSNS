@@ -13,10 +13,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardLable: UILabel!
     @IBOutlet weak var cardView: Card!
-    @IBOutlet weak var cardBottomBar: Bar!
     @IBOutlet weak var cardImage: ImageCard!
     @IBOutlet weak var normalImage: UIImageView!
     @IBOutlet weak var quoTextView: UITextView!
+    @IBOutlet weak var cardBottomBar: Bar!
+    
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var userMsgLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
