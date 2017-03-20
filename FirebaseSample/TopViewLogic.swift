@@ -12,7 +12,7 @@ import UIKit
 public class TopViewLogic {
     
     // テキストフィールドのスタイルを設定
-    internal func setQuoTextViewStyle(cell: CardCollectionViewCell) {
+    internal func setQuoTextViewStyle(cell: TopCollectionViewCell) {
 
         // 文字の影の位置
         cell.quoTextView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)

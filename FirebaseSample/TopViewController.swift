@@ -29,7 +29,7 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
     // 個別のデータ
     var topContentDic: [String: Any]! = [:]
     
-    var cells: CardCollectionViewCell!
+    var cells: TopCollectionViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as! TopCollectionViewCell
         selectedImageView = cell.normalImage
         
         let item = contentArray[indexPath.row]
@@ -80,7 +80,9 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         let topViewLogic = TopViewLogic()
-        self.cells = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
+        self.cells = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! TopCollectionViewCell
+        
+        
         
         // テキストビューのスタイルを設定
         topViewLogic.setQuoTextViewStyle(cell: cells)
