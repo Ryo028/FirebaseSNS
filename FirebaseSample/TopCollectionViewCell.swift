@@ -18,4 +18,6 @@ class TopCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var quoTextView: UITextView!
     @IBOutlet weak var cardBottomBar: Bar!
 
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var userMsgLabel: UILabel!
 }

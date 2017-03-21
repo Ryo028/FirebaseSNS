@@ -15,6 +15,7 @@ public class FireAccess {
     let storage: FIRStorage
     let storageRef: FIRStorageReference
     var imgTimestamp: String!
+    var imageURL: URL?
     
     init() {
         self.ref = FIRDatabase.database().reference()
@@ -37,31 +38,29 @@ public class FireAccess {
         let comment = formValueDic["Comment"] as! String
         let photo = formValueDic["Pic"] as! UIImage
         
-        let userID = (FIRAuth.auth()?.currentUser?.uid)!
-        let personNo = arc4random_uniform(99999999) + 10000000
+        //let userID = (FIRAuth.auth()?.currentUser?.uid)!
+        //let personImgNo = arc4random_uniform(99999999) + 10000000
         
         //let newPhoto = drawText(image: photo, quoText: quotation)
         let newPhoto = cropThumbnailImage(image: photo, w: 343, h: 458, quoText: quotation, quoName: name)
+        let data: Data = UIImagePNGRepresentation(newPhoto)!
+        let imageFIle = Salada.File(data: data)
         
-        self.ref.child(userID).childByAutoId().setValue([
-            "UserID"    : userID,
-            "Name"      : name,
-            "Quotation" : quotation,
-            "Commnet"   : comment,
-            "Date"      : FIRServerValue.timestamp(),
-            "PersonImg" : personNo.description + ".png"
-            ])
+        // 投稿データをインスタント化して値をセット
+        let quoData: QuoData = QuoData()
+        quoData.name = name
+        quoData.quotaion = quotation
+//        quoData.imageURL = self.imageURL
+        quoData.image = imageFIle
+        quoData.comment = comment
         
-        // 偉人の画像をアップロード
-        if let data = UIImagePNGRepresentation(newPhoto) {
-            let imageRef = storageRef.child("images/" + userID + "/" + personNo.description + ".png")
-            imageRef.put(data, metadata: nil, completion: { metaData, error in
-//                if error = nil {
-//                
-//                }
-//                print(metaData)
-//                print(error)
-            })
+        // 投稿データの保存
+        quoData.save { (ref, error) in
+            if error != nil {
+                
+            } else {
+                print(error)
+            }
         }
 
     }

@@ -82,8 +82,6 @@ class TopViewController: UIViewController, UICollectionViewDataSource, UICollect
         let topViewLogic = TopViewLogic()
         self.cells = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! TopCollectionViewCell
         
-        
-        
         // テキストビューのスタイルを設定
         topViewLogic.setQuoTextViewStyle(cell: cells)
         

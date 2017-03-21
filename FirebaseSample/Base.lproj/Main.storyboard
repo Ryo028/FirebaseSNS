@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="PrX-QH-9ox" customClass="TopNavigationViewController" customModule="FirebaseSample" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Dix-9C-rNH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="76s-MU-GQ6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="76s-MU-GQ6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -70,7 +70,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <attributedString key="attributedText">
-                                                                <fragment content="もし今日が人生最後の日だとしたら、今やろうとしている">
+                                                                <fragment content="テストテスト">
                                                                     <attributes>
                                                                         <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <font key="NSFont" size="12" name="HiraMinProN-W6"/>
@@ -102,6 +102,8 @@
                                             <outlet property="cardView" destination="vLl-19-e9N" id="Fhp-8B-yA1"/>
                                             <outlet property="normalImage" destination="V4x-kd-7db" id="Mwb-k3-uPC"/>
                                             <outlet property="quoTextView" destination="NeX-qa-LvP" id="9i8-Rh-KfX"/>
+                                            <outlet property="userImageView" destination="uY1-SF-mm3" id="bF8-7J-4MU"/>
+                                            <outlet property="userMsgLabel" destination="78y-GE-xWE" id="kY0-wW-dh0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -467,7 +469,7 @@
             <objects>
                 <navigationController id="6zO-5g-8IC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pyL-A0-W3H"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UZ1-99-eST">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UZ1-99-eST">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -591,7 +593,7 @@
         <scene sceneID="kxK-No-nSJ">
             <objects>
                 <navigationController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7d2-tG-5YK" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UZ4-CU-W6s">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UZ4-CU-W6s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

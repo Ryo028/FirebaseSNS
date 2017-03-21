@@ -36,24 +36,24 @@ class PostViewController: FormViewController {
 //                return header
 //            }()
 //        }
-        form +++ Section()
+        form +++ Section("投稿内容")
             
             <<< TextRow("Name") {
-                $0.title = "Name"
-                $0.placeholder = "Ryo Miyata"
+                //$0.title = "Name"
+                $0.placeholder = "スティーブ・ジョブズ"
             }.onChange{ row in
                 self.name = row.value
             }
             
             <<< TextAreaRow("Quo") {
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 100)
-                $0.placeholder = "名言を入れてください"
+                $0.placeholder = "Stay hungry, stay foolish"
             }.onChange{ row in
                 self.quotaion = row.value
             }
         
             <<< ImageRow("Pic") {
-                $0.title = "Image"
+                $0.title = "背景画像を選択"
                 $0.sourceTypes = .PhotoLibrary
                 $0.clearAction = .no
             }.cellUpdate { cell, row in
@@ -65,7 +65,7 @@ class PostViewController: FormViewController {
         form +++ Section("コメント")
             <<< TextAreaRow("Comment") {
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 100)
-                $0.placeholder = "入力してください"
+                $0.placeholder = "あなたが感じたことを入れてね。"
             }.onChange{ row in
                 self.comment = row.value
             }

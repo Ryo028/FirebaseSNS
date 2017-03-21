@@ -11,6 +11,12 @@
 		246B219E60783C71B9019BB2 /* Pods_FirebaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA0EEFE953DB48843069E37 /* Pods_FirebaseSample.framework */; };
 		2A1410981E7FC52300EFD73C /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1410971E7FC52300EFD73C /* CardCollectionViewCell.swift */; };
 		2A14109A1E7FC5C100EFD73C /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1410991E7FC5C100EFD73C /* TopCollectionViewCell.swift */; };
+		2A1410A01E812FBE00EFD73C /* Referenceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A14109C1E812FBE00EFD73C /* Referenceable.swift */; };
+		2A1410A11E812FBE00EFD73C /* Salada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A14109D1E812FBE00EFD73C /* Salada.swift */; };
+		2A1410A21E812FBE00EFD73C /* Salada+Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A14109E1E812FBE00EFD73C /* Salada+Datasource.swift */; };
+		2A1410A31E812FBE00EFD73C /* Salada+Relation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A14109F1E812FBE00EFD73C /* Salada+Relation.swift */; };
+		2A1410A51E81307300EFD73C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1410A41E81307300EFD73C /* User.swift */; };
+		2A1410A81E81343B00EFD73C /* QuoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1410A71E81343B00EFD73C /* QuoData.swift */; };
 		2A19EDE11E745AB400FDB2CD /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19EDE01E745AB400FDB2CD /* SubViewController.swift */; };
 		2A6A47C61E62C3F300D547F0 /* TopViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */; };
 		2AD402621E7E307B0080343D /* TopNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD402611E7E307B0080343D /* TopNavigationViewController.swift */; };
@@ -61,6 +67,12 @@
 		1065263A7A9CF5EFF7BE65C8 /* Pods_FirebaseSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1410971E7FC52300EFD73C /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		2A1410991E7FC5C100EFD73C /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
+		2A14109C1E812FBE00EFD73C /* Referenceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Referenceable.swift; path = "../../../Downloads/Salada-master/Salada/Referenceable.swift"; sourceTree = "<group>"; };
+		2A14109D1E812FBE00EFD73C /* Salada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Salada.swift; path = "../../../Downloads/Salada-master/Salada/Salada.swift"; sourceTree = "<group>"; };
+		2A14109E1E812FBE00EFD73C /* Salada+Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Salada+Datasource.swift"; path = "../../../Downloads/Salada-master/Salada/Salada+Datasource.swift"; sourceTree = "<group>"; };
+		2A14109F1E812FBE00EFD73C /* Salada+Relation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Salada+Relation.swift"; path = "../../../Downloads/Salada-master/Salada/Salada+Relation.swift"; sourceTree = "<group>"; };
+		2A1410A41E81307300EFD73C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2A1410A71E81343B00EFD73C /* QuoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoData.swift; sourceTree = "<group>"; };
 		2A19EDE01E745AB400FDB2CD /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		2A6A47C51E62C3F300D547F0 /* TopViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewLogic.swift; sourceTree = "<group>"; };
 		2AD402611E7E307B0080343D /* TopNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopNavigationViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +143,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A14109B1E812F6500EFD73C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A1410A61E81338400EFD73C /* Salada */,
+				2A1410A41E81307300EFD73C /* User.swift */,
+				2A1410A71E81343B00EFD73C /* QuoData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2A1410A61E81338400EFD73C /* Salada */ = {
+			isa = PBXGroup;
+			children = (
+				2A14109D1E812FBE00EFD73C /* Salada.swift */,
+				2A14109E1E812FBE00EFD73C /* Salada+Datasource.swift */,
+				2A14109F1E812FBE00EFD73C /* Salada+Relation.swift */,
+				2A14109C1E812FBE00EFD73C /* Referenceable.swift */,
+			);
+			name = Salada;
+			sourceTree = "<group>";
+		};
 		2A19EDE21E745AB800FDB2CD /* Top */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				548F6BCE1E2AFDA60049C66D /* AppDelegate.swift */,
+				2A14109B1E812F6500EFD73C /* Model */,
 				54EB35FB1E2BAC5300D24034 /* ViewController */,
 				548F6BD41E2AFDA60049C66D /* Main.storyboard */,
 				54B122B11E3C7AAA004F31D9 /* User.png */,
@@ -548,17 +582,23 @@
 				548F6BCF1E2AFDA60049C66D /* AppDelegate.swift in Sources */,
 				54B122B61E3C8370004F31D9 /* TargetTableViewCell.swift in Sources */,
 				54A11B481E43925C00C5939B /* FireAccess.swift in Sources */,
+				2A1410A81E81343B00EFD73C /* QuoData.swift in Sources */,
 				54D445911E3D09B500227D66 /* ViewLogic.swift in Sources */,
+				2A1410A01E812FBE00EFD73C /* Referenceable.swift in Sources */,
 				548F6C011E2B06DB0049C66D /* SignupViewController.swift in Sources */,
 				2A1410981E7FC52300EFD73C /* CardCollectionViewCell.swift in Sources */,
 				548F6C031E2B29FD0049C66D /* LoginViewController.swift in Sources */,
 				548F6BD11E2AFDA60049C66D /* TopViewController.swift in Sources */,
+				2A1410A21E812FBE00EFD73C /* Salada+Datasource.swift in Sources */,
 				2A19EDE11E745AB400FDB2CD /* SubViewController.swift in Sources */,
 				5461CA511E4F811100B8C1C2 /* PreViewController.swift in Sources */,
 				549D99711E3CDA9600B63142 /* TargetContentView.swift in Sources */,
+				2A1410A31E812FBE00EFD73C /* Salada+Relation.swift in Sources */,
 				54B122B41E3C7BB5004F31D9 /* ProfileViewController.swift in Sources */,
+				2A1410A11E812FBE00EFD73C /* Salada.swift in Sources */,
 				2AD402621E7E307B0080343D /* TopNavigationViewController.swift in Sources */,
 				54BE4A951E34D260005A18B8 /* Login.swift in Sources */,
+				2A1410A51E81307300EFD73C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
